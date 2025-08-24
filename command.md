@@ -29,3 +29,7 @@ npm i --save-dev @types/bcryptjs
 
 npm i --save-dev husky lint-staged
 npx husky init
+
+## Run Test
+
+nx test nestjs
