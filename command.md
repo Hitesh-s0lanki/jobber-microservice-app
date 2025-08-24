@@ -1,0 +1,1 @@
+## Nx command for starting the monorepo
