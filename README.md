@@ -1,82 +1,99 @@
-# JobberMicroserviceApp
+# Jobber Microservice App 🚀
 
-<a alt="Nx logo" href="https://nx.dev" target="_blank" rel="noreferrer"><img src="https://raw.githubusercontent.com/nrwl/nx/master/images/nx-logo.png" width="45"></a>
+> **Distributed Job Engine with gRPC, Pulsar, Kubernetes & AWS**
 
-✨ Your new, shiny [Nx workspace](https://nx.dev) is almost ready ✨.
+![Jobber Microservice Architecture](./images/arch.png)
 
-[Learn more about this workspace setup and its capabilities](https://nx.dev/nx-api/nest?utm_source=nx_project&amp;utm_medium=readme&amp;utm_campaign=nx_projects) or run `npx nx graph` to visually explore what was created. Now, let's get you up to speed!
+---
 
-## Finish your CI setup
+## 📌 Description
 
-[Click here to finish setting up your workspace!](https://cloud.nx.app/connect/uaT41jTeJG)
+The **Jobber Microservice App** is a fully functional **distributed job engine** designed to handle large-scale job processing with **NestJS microservices**, **Apache Pulsar**, **gRPC**, and **GraphQL**.  
+Built with **Nx monorepo architecture**, it ensures scalability, maintainability, and high performance, making it ideal for modern enterprise-grade applications.
 
+This project is designed to provide **hands-on experience** in designing, developing, and deploying **real-world distributed microservices**.
 
-## Run tasks
+---
 
-To run the dev server for your app, use:
+## 🔹 Key Features
 
-```sh
-npx nx serve jobber-auth
+- ⚡ **Distributed Job Engine** — Build a robust and scalable job processing system
+- 🏗️ **Monorepo Architecture** — Use **Nx** for better structure and efficient dependency management
+- 🔗 **gRPC Transport Layer** — Enable **high-performance, low-latency** service-to-service communication
+- 📩 **Apache Pulsar Messaging** — Reliable **event-driven job processing** with message acknowledgments
+- 🧩 **GraphQL API** — Flexible data access with optimized querying and mutation handling
+- 🔐 **JWT Authentication** — Secure communication using JWT and **HTTP-only cookies**
+- 🧠 **OOP Principles** — Modular, reusable, and maintainable code structure
+- 📈 **Horizontal Scaling** — Effortlessly scale services to handle **massive workloads**
+- 🐳 **Optimized Dockerization** — Use **Nx libraries** and independent `package.json` files for faster builds
+- 🗄️ **Database Layer** — Use **Prisma ORM** + **Drizzle ORM** with **PostgreSQL** for reliable DB management
+- ☸️ **Kubernetes Deployment** — Follow best practices for **production-ready container orchestration**
+- 🌐 **AWS Production Setup** — Deploy with **custom domains** and **SSL encryption**
+- 🏆 **Real-World Experience** — Covers **designing**, **developing**, and **deploying** NestJS microservices end-to-end
+
+---
+
+## 🏛️ Tech Stack
+
+| **Category**         | **Technology**                |
+| -------------------- | ----------------------------- |
+| **Framework**        | [NestJS](https://nestjs.com/) |
+| **Monorepo**         | [Nx](https://nx.dev/)         |
+| **Transport Layer**  | gRPC                          |
+| **Messaging**        | Apache Pulsar                 |
+| **API**              | GraphQL                       |
+| **Database**         | PostgreSQL                    |
+| **ORM**              | Prisma + Drizzle              |
+| **Authentication**   | JWT + HTTP-only cookies       |
+| **Containerization** | Docker                        |
+| **Orchestration**    | Kubernetes                    |
+| **Deployment**       | AWS with SSL & custom domains |
+
+---
+
+## 📦 Project Highlights
+
+- **Monorepo with Nx** → Simplifies multi-service development and dependency management
+- **gRPC Communication** → High-speed, efficient inter-service RPC calls
+- **Event-Driven Architecture** → Pulsar ensures reliable distributed job scheduling
+- **GraphQL API Gateway** → Centralized API layer for all microservices
+- **Docker + Kubernetes** → Optimized for **cloud-native deployment**
+- **AWS Deployment** → Scalable, secure, and production-ready
+
+---
+
+## 📌 Architecture Overview
+
+The system follows a **microservices architecture** where each service handles a dedicated responsibility:
+
+- **Job Service** → Handles job creation, assignment, and scheduling
+- **Worker Service** → Processes jobs and communicates results
+- **Auth Service** → Handles authentication & authorization
+- **Gateway Service** → Exposes a GraphQL API to clients
+- **Message Broker** → Uses **Apache Pulsar** for inter-service messaging
+- **Database Layer** → PostgreSQL + Prisma + Drizzle ORM for strong schema management
+
+![Jobber Microservice Architecture](./assets/jobber-architecture.png)
+
+---
+
+## 🚀 Deployment Strategy
+
+- **Dockerized microservices** for independent builds
+- **Kubernetes Helm charts** for container orchestration
+- **Horizontal Pod Autoscaling** to handle traffic spikes
+- **AWS Deployment** with:
+  - Custom domains
+  - SSL certificates
+  - CI/CD pipelines for smooth updates
+
+---
+
+## 🧑‍💻 Getting Started
+
+### 1️⃣ Clone the Repository
+
+```bash
+git clone https://github.com/<your-username>/jobber-microservice-app.git
+cd jobber-microservice-app
 ```
-
-To create a production bundle:
-
-```sh
-npx nx build jobber-auth
-```
-
-To see all available targets to run for a project, run:
-
-```sh
-npx nx show project jobber-auth
-```
-
-These targets are either [inferred automatically](https://nx.dev/concepts/inferred-tasks?utm_source=nx_project&utm_medium=readme&utm_campaign=nx_projects) or defined in the `project.json` or `package.json` files.
-
-[More about running tasks in the docs &raquo;](https://nx.dev/features/run-tasks?utm_source=nx_project&utm_medium=readme&utm_campaign=nx_projects)
-
-## Add new projects
-
-While you could add new projects to your workspace manually, you might want to leverage [Nx plugins](https://nx.dev/concepts/nx-plugins?utm_source=nx_project&utm_medium=readme&utm_campaign=nx_projects) and their [code generation](https://nx.dev/features/generate-code?utm_source=nx_project&utm_medium=readme&utm_campaign=nx_projects) feature.
-
-Use the plugin's generator to create new projects.
-
-To generate a new application, use:
-
-```sh
-npx nx g @nx/nest:app demo
-```
-
-To generate a new library, use:
-
-```sh
-npx nx g @nx/node:lib mylib
-```
-
-You can use `npx nx list` to get a list of installed plugins. Then, run `npx nx list <plugin-name>` to learn about more specific capabilities of a particular plugin. Alternatively, [install Nx Console](https://nx.dev/getting-started/editor-setup?utm_source=nx_project&utm_medium=readme&utm_campaign=nx_projects) to browse plugins and generators in your IDE.
-
-[Learn more about Nx plugins &raquo;](https://nx.dev/concepts/nx-plugins?utm_source=nx_project&utm_medium=readme&utm_campaign=nx_projects) | [Browse the plugin registry &raquo;](https://nx.dev/plugin-registry?utm_source=nx_project&utm_medium=readme&utm_campaign=nx_projects)
-
-
-[Learn more about Nx on CI](https://nx.dev/ci/intro/ci-with-nx#ready-get-started-with-your-provider?utm_source=nx_project&utm_medium=readme&utm_campaign=nx_projects)
-
-## Install Nx Console
-
-Nx Console is an editor extension that enriches your developer experience. It lets you run tasks, generate code, and improves code autocompletion in your IDE. It is available for VSCode and IntelliJ.
-
-[Install Nx Console &raquo;](https://nx.dev/getting-started/editor-setup?utm_source=nx_project&utm_medium=readme&utm_campaign=nx_projects)
-
-## Useful links
-
-Learn more:
-
-- [Learn more about this workspace setup](https://nx.dev/nx-api/nest?utm_source=nx_project&amp;utm_medium=readme&amp;utm_campaign=nx_projects)
-- [Learn about Nx on CI](https://nx.dev/ci/intro/ci-with-nx?utm_source=nx_project&utm_medium=readme&utm_campaign=nx_projects)
-- [Releasing Packages with Nx release](https://nx.dev/features/manage-releases?utm_source=nx_project&utm_medium=readme&utm_campaign=nx_projects)
-- [What are Nx plugins?](https://nx.dev/concepts/nx-plugins?utm_source=nx_project&utm_medium=readme&utm_campaign=nx_projects)
-
-And join the Nx community:
-- [Discord](https://go.nx.dev/community)
-- [Follow us on X](https://twitter.com/nxdevtools) or [LinkedIn](https://www.linkedin.com/company/nrwl)
-- [Our Youtube channel](https://www.youtube.com/@nxdevtools)
-- [Our blog](https://nx.dev/blog?utm_source=nx_project&utm_medium=readme&utm_campaign=nx_projects)
