@@ -33,3 +33,20 @@ npx husky init
 ## Run Test
 
 nx test nestjs
+
+## Config File
+
+npm i --save @nestjs/config
+
+## JWT Config
+
+npm i --save @nestjs/jwt
+
+## GraphQL Settings
+
+"request.credentials": "same-origin"
+
+## Passport Service
+
+npm i --save passport-jwt @nestjs/passport passport
+npm i --save-dev @types/passport-jwt
