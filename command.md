@@ -50,3 +50,7 @@ npm i --save @nestjs/jwt
 
 npm i --save passport-jwt @nestjs/passport passport
 npm i --save-dev @types/passport-jwt
+
+## Discovery library
+
+npm i --save @golevelup/nestjs-discovery
