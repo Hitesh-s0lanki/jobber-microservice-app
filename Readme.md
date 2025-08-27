@@ -73,8 +73,6 @@ The system follows a **microservices architecture** where each service handles a
 - **Message Broker** → Uses **Apache Pulsar** for inter-service messaging
 - **Database Layer** → PostgreSQL + Prisma + Drizzle ORM for strong schema management
 
-![Jobber Microservice Architecture](./assets/jobber-architecture.png)
-
 ---
 
 ## 🚀 Deployment Strategy
